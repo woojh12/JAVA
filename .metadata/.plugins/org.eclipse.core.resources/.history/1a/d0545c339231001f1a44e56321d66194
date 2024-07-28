@@ -1,0 +1,28 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Test05 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		List<Person> list = new ArrayList<>();
+				
+		while(true)
+		{
+			System.out.println("1.입력 2.출력 3.삭제 4.종료");
+			int sel = scan.nextInt();
+			if(sel == 1)
+			{
+				System.out.println("이름 입력 : ");
+				String name = scan.nextLine();
+				System.out.println("생년월일 입력 : ");
+				int birth = scan.nextInt();
+				Person person = new Person(name, birth);
+				list.add(person);
+				System.out.println(person);
+			}
+		}
+	}
+}
